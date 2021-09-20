@@ -1,0 +1,68 @@
+.page-3{
+ background-color: $grayish-background;   
+}
+
+.section-header{
+    @include flexy($just: center, $align: center, $dir: column);
+    padding: 30px;
+    & > * {
+        margin: 10px;
+    }
+}
+
+.header-left{
+    @include flexy($just: flex-start, $align: center);
+    .svg{
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $accent-blue;
+        margin: 0 10px;
+        svg{
+            fill: $font-white;
+        }
+    }    
+}
+
+.header-right{
+    @include flexy($align: center);
+    form > *{
+        border: 0;
+    }
+
+    form{
+        @include buttonEffect;
+    }
+    form input{
+        padding: 10px;
+        width: 155px;
+    }
+    form button{
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 0 5px 5px 0;
+        color: $font-white;
+        background-color: $accent-blue;
+        cursor: pointer;
+    }
+    
+    border-radius: 5px;
+    background: $white-background;
+    height: 50px;
+    @extend %componentShaddow;
+}
+
+@include mq("md" or "lg") {
+    .section-header{
+        @include flexy($just: space-between, $align: center, $dir: row);
+        padding: 30px;
+        & > * {
+            margin: 0;
+        }
+    }
+
+    .header-right{
+        form input{
+            width: auto;
+        }
+    }
+}
