@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body, html{
+    height: 100vh;
+}
+
+body{
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-template-rows: 20% 5% auto 5%;
+
+    @include mq("sm") {
+        grid-template-areas: "header"
+                             "nav"
+                             "main"
+                             "footer";
+    }@include mq("md"){
+        grid-template-columns: 50px 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "nav main"
+            "footer footer";
+    }
+
+}
+
+header{
+    grid-area: header;
+    background-color: chocolate;
+}
+
+nav{
+    grid-area: nav;
+    background-color: darkkhaki;
+}
+main{
+    grid-area: main;
+    background-color: gainsboro;
+}
+
+footer{
+    grid-area: footer;
+    background-color: coral;
+}
+
+.hide{
+    display: none;
+}

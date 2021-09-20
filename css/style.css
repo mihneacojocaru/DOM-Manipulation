@@ -337,4 +337,79 @@ template {
   display: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr);
+  grid-template-rows: 20% 5% auto 5%;
+}
+@media (min-width: 300px) {
+  body {
+    grid-template-areas: "header" "nav" "main" "footer";
+  }
+}
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: "header header" "nav main" "nav main" "footer footer";
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: chocolate;
+}
+
+nav {
+  grid-area: nav;
+  background-color: darkkhaki;
+}
+
+main {
+  grid-area: main;
+  background-color: gainsboro;
+}
+
+footer {
+  grid-area: footer;
+  background-color: coral;
+}
+
+.hide {
+  display: none;
+}
+
+.content-1 {
+  background-color: gray;
+  color: wheat;
+  height: 120px;
+  text-align: center;
+  padding: 30px;
+}
+
+.content-2 {
+  background-color: peachpuff;
+  color: black;
+  height: 130px;
+  text-align: center;
+  padding: 30px;
+}
+
+.content-3 {
+  background-color: darkslateblue;
+  color: whitesmoke;
+  height: 150px;
+  text-align: center;
+  padding: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
