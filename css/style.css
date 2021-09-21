@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-.header-right {
+.people-cards .card, .header-right {
   box-shadow: 0 11px 6px -7px rgba(43, 43, 43, 0.1);
 }
 
@@ -461,7 +461,7 @@ nav a {
 }
 nav .selected {
   background-color: #1D2531;
-  border-top: 4px solid #42A5F5;
+  border-top: 3px solid #42A5F5;
 }
 nav .nav-buttons {
   position: sticky;
@@ -508,7 +508,7 @@ nav svg {
   }
   nav .selected {
     background-color: #1D2531;
-    border-left: 4px solid #42A5F5;
+    border-left: 3px solid #42A5F5;
     border-top: 0;
   }
 }
@@ -596,6 +596,75 @@ main {
   cursor: pointer;
 }
 
+.section-main {
+  margin-top: -20px;
+}
+
+.invitees-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.people-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.people-cards .card {
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+.people-cards .card > * {
+  padding: 5px 0;
+}
+.people-cards .card h3 {
+  color: #0E141C;
+}
+.people-cards .card label {
+  color: #263444;
+}
+.people-cards .card .card-buttons button:hover {
+  background-color: #263444;
+  color: #fff;
+  cursor: pointer;
+}
+.people-cards .card .card-buttons button:active {
+  background-color: #4099FF;
+  color: #fff;
+}
+.people-cards .card button:first-child {
+  background-color: #4099FF;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px 10px;
+  color: #fff;
+}
+.people-cards .card button:nth-child(2) {
+  background-color: #FDB64E;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.responded > * {
+  color: #333 !important;
+}
+
+.responded {
+  border: 1px solid #333;
+}
+
 @media (min-width: 768px) {
   .section-header {
     display: flex;
@@ -608,8 +677,30 @@ main {
     margin: 0;
   }
 
+  .header-right {
+    margin-top: 0px;
+  }
   .header-right form input {
-    width: auto;
+    width: 180px;
+  }
+
+  .section-main {
+    margin-top: 0;
+  }
+
+  .invitees-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+  }
+
+  .people-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 .page-4 {

@@ -44,7 +44,7 @@
       </div>
     </nav>
     <main class="mainSection">
-      <section class="page page-1">
+      <section class="page page-1 hide">
         <p>TEXT 1</p>
         <br />
         <p>
@@ -60,7 +60,7 @@
           eaque!
         </p>
       </section>
-      <section class="page page-3 hide">
+      <section class="page page-3">
         <div class="section-header">
             <div class="header-left">
                 <div class="svg">
@@ -76,13 +76,39 @@
             <div class="header-right">
                 <form class="entry-form">
                     <input type="text" placeholder="Invite Someone" id="addPerson">
-        
                     <button id="btnSubmit">Submit</button>
                 </form>
             </div>
         </div>
         <div class="section-main">
-
+            <div class="invitees-header">
+                <h2>Invitees</h2>
+                <label for="hide-people">Hide those who haven't responded <input type="checkbox" name="hide-people" id="hidePeople"></label>
+            </div>
+            <div class="people-cards">
+                <div class="card">
+                    <h3 class="card-header">John Doe</h3>
+                    <label for="confirmed" class="confirmed-label">
+                        Confirmed
+                        <input type="checkbox" name="confirmed" class="confirmed-check">
+                    </label>
+                    <div class="card-buttons">
+                        <button class="btnEdit">Edit</button>
+                        <button class="btnRemove">Remove</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Jane Doe</h3>
+                    <label for="confirmed" class="confirmed-label">
+                        Confirmed
+                        <input type="checkbox" name="confirmed" class="confirmed-check">
+                    </label>
+                    <div class="card-buttons">
+                        <button class="btnEdit">Edit</button>
+                        <button class="btnRemove">Remove</button>
+                    </div>
+                </div>
+            </div>
         </div>
       </section>
       <section class="page page-4 hide">

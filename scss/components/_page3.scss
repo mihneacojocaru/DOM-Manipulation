@@ -51,6 +51,65 @@
     @extend %componentShaddow;
 }
 
+.section-main{
+    margin-top: -20px;
+}
+
+.invitees-header{
+    @include flexy($align: center, $just: center, $dir: column);
+}
+
+.people-cards{
+    @include flexy($just: center, $align: center, $wrap: wrap);
+    padding: 30px;
+
+    .card{
+        margin: 10px;
+        background-color: $white-background;
+        border-radius: 5px;
+        @extend %componentShaddow;
+        @include flexy($just: center, $align: center, $dir: column);
+        & > * {
+            padding: 5px 0;
+        }
+        padding: 20px 10px;
+        h3{
+            color: $dark4-background;
+        }
+        label{
+            color: $dark1-background;
+        }
+
+        .card-buttons{
+            @include buttonEffect;
+        }
+
+        button:first-child{
+            background-color: $accent-blue;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 10px;
+            color: $font-white;
+        }
+        button:nth-child(2){
+            background-color: $accent-orange;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: $font-white;
+        }
+    }
+
+}
+
+.responded > *{
+    color: $font-dark!important;
+}
+
+.responded{
+    border: 1px solid $font-dark;
+}
+
 @include mq("md" or "lg") {
     .section-header{
         @include flexy($just: space-between, $align: center, $dir: row);
@@ -61,8 +120,23 @@
     }
 
     .header-right{
+        margin-top: 0px;
         form input{
-            width: auto;
+            width: 180px;
         }
     }
+
+    .section-main{
+        margin-top: 0;
+    }
+
+    .invitees-header{
+        @include flexy($align: flex-start, $just: center, $dir: column);
+        padding: 0 40px;
+    }
+
+    .people-cards{
+        @include flexy($align: center, $just: flex-start, $dir: row);
+    }
+
 }

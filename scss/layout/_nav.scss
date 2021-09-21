@@ -20,7 +20,7 @@ nav{
 
     .selected{
         background-color: $dark3-background;
-        border-top: 4px solid $selected-blue;
+        border-top: 3px solid $selected-blue;
     }
     .nav-buttons{
         position: sticky;
@@ -63,7 +63,7 @@ nav{
 
         .selected{
             background-color: $dark3-background;
-            border-left: 4px solid $selected-blue;
+            border-left: 3px solid $selected-blue;
             border-top: 0;
         }
     }
