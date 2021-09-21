@@ -53,7 +53,7 @@ form.addEventListener("submit", (e) => {
   } else {
     let card = createCard(input.value);
     peopleCards.appendChild(card);
-    // input.value = "";
+    input.value = "";
   }
 });
 
