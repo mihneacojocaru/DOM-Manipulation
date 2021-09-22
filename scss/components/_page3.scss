@@ -67,6 +67,8 @@
         margin: 10px;
         background-color: $white-background;
         border-radius: 5px;
+        max-width: 12em;
+        overflow: hidden;
         @extend %componentShaddow;
         @include flexy($just: center, $align: center, $dir: column);
         & > * {
@@ -82,6 +84,9 @@
 
         .card-buttons{
             @include buttonEffect;
+            & > *{
+                margin: 0 2px;
+            }
         }
 
         button:first-child{

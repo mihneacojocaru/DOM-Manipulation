@@ -618,6 +618,8 @@ main {
   margin: 10px;
   background-color: white;
   border-radius: 5px;
+  max-width: 12em;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,6 +643,9 @@ main {
 .people-cards .card .card-buttons button:active {
   background-color: #4099FF;
   color: #fff;
+}
+.people-cards .card .card-buttons > * {
+  margin: 0 2px;
 }
 .people-cards .card button:first-child {
   background-color: #4099FF;
