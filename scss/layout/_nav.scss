@@ -25,6 +25,9 @@ nav{
     .nav-buttons{
         position: sticky;
         top: 0;
+        h2{
+            display: none;
+        }
     }
 
     svg{
@@ -34,7 +37,11 @@ nav{
     @include mq("md" or "lg"){
         
         .nav-buttons{
-            top: 70px;
+            h2{
+                display: block;
+                color: $white-background;
+                margin: 20px 30px;
+            }
         }
     }
     @include mq("md" or "lg"){

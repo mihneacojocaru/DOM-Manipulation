@@ -362,7 +362,7 @@ body {
 @media (min-width: 768px) {
   body {
     grid-template-columns: 200px 1fr;
-    grid-template-areas: "header header" "nav main" "nav main" "nav main";
+    grid-template-areas: "nav header" "nav main" "nav main" "nav main";
   }
 }
 
@@ -426,8 +426,7 @@ header .user-info span {
 }
 @media (min-width: 768px) {
   header h2 {
-    background-color: #263444;
-    color: #fff;
+    display: none;
   }
   header .user-info span {
     display: inline;
@@ -467,13 +466,18 @@ nav .nav-buttons {
   position: sticky;
   top: 0;
 }
+nav .nav-buttons h2 {
+  display: none;
+}
 nav svg {
   fill: white;
   padding: 3px;
 }
 @media (min-width: 768px) {
-  nav .nav-buttons {
-    top: 70px;
+  nav .nav-buttons h2 {
+    display: block;
+    color: white;
+    margin: 20px 30px;
   }
 }
 @media (min-width: 768px) {

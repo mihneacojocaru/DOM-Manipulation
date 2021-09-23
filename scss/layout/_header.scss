@@ -47,8 +47,7 @@ header {
 
   @include mq("md" or "lg"){
     h2{
-      background-color: $dark1-background;
-      color: $font-white;
+      display: none;
     }
 
     .user-info{
